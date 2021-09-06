@@ -14,4 +14,13 @@ export default {
 </script>
 
 <style lang="scss">
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #282F46;
+  color: #fff;
+}
 </style>
