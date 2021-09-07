@@ -1,14 +1,23 @@
 <template>
-  <Navigator/>
+  <div class="">
+    <Navigator/>
+    <UsersList/>
+  </div>
 </template>
 
 <script>
-import Navigator from './components/Navigator.vue'
+import Navigator from './components/Navigator.vue';
+import UsersList from './components/Users.vue';
 
 export default {
   name: 'App',
   components: {
     Navigator,
+    UsersList,
+  },
+  data() {
+    return {
+    }
   }
 }
 </script>
