@@ -2,7 +2,7 @@
   <div class="">
     <Navigator/>
     <UsersList v-show="visibleUsers"/>
-    <Playlist/>
+    <Playlist v-show="visiblePlaylist"/>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       visibleUsers : false,
+      visiblePlaylist : true,
 
     }
   }
