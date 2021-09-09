@@ -1,22 +1,27 @@
 <template>
   <div class="">
     <Navigator/>
-    <UsersList/>
+    <UsersList v-show="visibleUsers"/>
+    <Playlist/>
   </div>
 </template>
 
 <script>
 import Navigator from './components/Navigator.vue';
 import UsersList from './components/Users.vue';
+import Playlist from './components/Playlist.vue';
 
 export default {
   name: 'App',
   components: {
     Navigator,
     UsersList,
+    Playlist,
   },
   data() {
     return {
+      visibleUsers : false,
+
     }
   }
 }
