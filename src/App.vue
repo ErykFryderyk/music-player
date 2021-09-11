@@ -1,8 +1,12 @@
 <template>
   <div class="">
-    <Navigator/>
+    <Navigator 
+      @show-users="visibleUsers = !visibleUsers"
+      @show-playlist="visiblePlaylist = !visiblePlaylist"
+      />
     <UsersList v-show="visibleUsers"/>
-    <Playlist v-show="visiblePlaylist"/>
+    <Playlist @change="visibleUsers = !visibleUsers"
+      v-show="visiblePlaylist"/>
   </div>
 </template>
 
@@ -20,10 +24,11 @@ export default {
   },
   data() {
     return {
-      visibleUsers : false,
-      visiblePlaylist : true,
-
+        visibleUsers: false,
+        visiblePlaylist: false,
     }
+  },
+  methods: {
   }
 }
 </script>
