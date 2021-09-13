@@ -3,9 +3,10 @@
     <Navigator 
       @show-users="visibleUsers = !visibleUsers"
       @show-playlist="visiblePlaylist = !visiblePlaylist"
+      @show-player="visiblePlayer = !visiblePlayer"
       />
     <UsersList v-show="visibleUsers"/>
-    <Playlist @change="visibleUsers = !visibleUsers"
+    <Playlist @show-playlist="visibleUsers = !visibleUsers"
       v-show="visiblePlaylist"/>
     <Player v-show="visiblePlayer"/>
   </div>
