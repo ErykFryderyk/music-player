@@ -102,6 +102,12 @@ export default {
 <style lang="scss" scoped>
 .playlist{
     background-color: #282F46;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 .header{
 padding: 20px 0;
@@ -137,6 +143,7 @@ margin-bottom: 15px;
         border-bottom: 2px solid #3DC864;
         border-top: 2px solid #3DC864;
         font-family: 'Arial Narrow', Arial, sans-serif;
+        outline: none;
 
         &::placeholder{
             font-size: inherit;
@@ -152,6 +159,7 @@ margin-bottom: 15px;
         width: 50px;
         cursor: pointer;
         background-color: transparent;
+        outline: none;
         -webkit-tap-highlight-color: transparent;
 
         svg{
