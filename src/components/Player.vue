@@ -9,8 +9,14 @@
                 </div>
             </div>
             <div class="song-box__info">
-                <span class="__time">5:24</span>
-                <span class="__rate">******</span>
+                <span class="song-time">5:24</span>
+                <div class="rating">
+                    <span class="rating__circle rating__circle--checked"></span>
+                    <span class="rating__circle rating__circle--checked"></span>
+                    <span class="rating__circle rating__circle--checked"></span>
+                    <span class="rating__circle"></span>
+                    <span class="rating__circle"></span>
+                </div>
             </div>
         </div>
         <div class="next-song">
@@ -20,8 +26,8 @@
                     <li class="next-song__list-item">
                         <span>{{songs[0].artist}} - {{songs[0].song}}</span>
                         <div class="rate-buttons">
-                            <button class="rate-btn rate-btn--good">4</button>
-                            <button class="rate-btn rate-btn--bad">2</button>
+                            <button class="rate-btn rate-btn--like">4</button>
+                            <button class="rate-btn rate-btn--hate">2</button>
                         </div>
                     </li>
                 </ul>
@@ -33,29 +39,29 @@
                 <li class="next-song__list-item">
                     <span>{{songs[0].artist}} - {{songs[0].song}}</span>
                     <div class="rate-buttons">
-                        <button class="rate-btn rate-btn--good">4</button>
-                        <button class="rate-btn rate-btn--bad">2</button>
+                        <button class="rate-btn rate-btn--like">4</button>
+                        <button class="rate-btn rate-btn--hate">2</button>
                     </div>
                 </li>
                 <li class="next-song__list-item">
                     <span>{{songs[0].artist}} - {{songs[0].song}}</span>
                     <div class="rate-buttons">
-                        <button class="rate-btn rate-btn--good">4</button>
-                        <button class="rate-btn rate-btn--bad">2</button>
+                        <button class="rate-btn rate-btn--like">4</button>
+                        <button class="rate-btn rate-btn--hate">2</button>
                     </div>
                 </li>
                 <li class="next-song__list-item">
                     <span>{{songs[0].artist}} - {{songs[0].song}}</span>
                     <div class="rate-buttons">
-                        <button class="rate-btn rate-btn--good">4</button>
-                        <button class="rate-btn rate-btn--bad">2</button>
+                        <button class="rate-btn rate-btn--like">4</button>
+                        <button class="rate-btn rate-btn--hate">2</button>
                     </div>
                 </li>
                 <li class="next-song__list-item">
                     <span>{{songs[0].artist}} - {{songs[0].song}}</span>
                     <div class="rate-buttons">
-                        <button class="rate-btn rate-btn--good">4</button>
-                        <button class="rate-btn rate-btn--bad">2</button>
+                        <button class="rate-btn rate-btn--like">4</button>
+                        <button class="rate-btn rate-btn--hate">2</button>
                     </div>
                 </li>
             </ul>
@@ -151,6 +157,53 @@ export default {
             padding-left: 20px;
             margin-bottom: 10px;
         }
+    }
+    .song-time{
+        margin-bottom: 5px;
+        font-size: 20px;
 
+    }
+    .rating{
+        width: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__circle{
+            height: 9px;
+            width: 9px;
+            background-color: #969696;
+            border-radius: 50%;
+            cursor:pointer;
+
+            &--checked{
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+            }
+        }
+
+    }
+    .rate-buttons{
+        width: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .rate-btn{
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border:none;
+        border-radius:50%;
+        cursor: pointer;
+        text-align: center;
+
+        &--like{
+            border: 2px solid green;
+            color: green;
+        }
+        &--hate{
+            border: 2px solid red;
+            color: red;
+        }
     }
 </style>
