@@ -1,14 +1,13 @@
 <template>
   <div class="container">
     <Navigator 
-      @show-users="visibleUsers = !visibleUsers"
-      @show-playlist="visiblePlaylist = !visiblePlaylist"
-      @show-player="visiblePlayer = !visiblePlayer"
+      @show-users="showModal"
+      @show-playlist="showModal"
+      @show-player="showModal"
       />
-    <UsersList v-show="visibleUsers"/>
-    <Playlist @show-playlist="visibleUsers = !visibleUsers"
-      v-show="visiblePlaylist"/>
-    <Player v-show="visiblePlayer"/>
+    <UsersList v-show="visibleModals.visibleUsers"/>
+    <Playlist v-show="visibleModals.visiblePlaylist"/>
+    <Player v-show="visibleModals.visiblePlayer"/>
   </div>
 </template>
 
@@ -28,12 +27,22 @@ export default {
   },
   data() {
     return {
+      visibleModals: {
         visibleUsers: false,
         visiblePlaylist: false,
-        visiblePlayer: false,
+        visiblePlayer: true,
+      }
     }
   },
   methods: {
+    showModal(el) {
+      for(let prop in this.visibleModals) {
+        this.visibleModals[prop] = false;
+        if(el === prop){
+          this.visibleModals[prop] = true;
+        }
+      }
+    }
   }
 }
 </script>
@@ -43,6 +52,7 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 body{
   background-color: #282F46;
