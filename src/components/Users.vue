@@ -62,20 +62,29 @@ export default {
     border-bottom: 1px solid #3dc86473;
 
     &__title{
-        font-size: 35px;
+        font-size: 25px;
         color: #3DC864;
+        font-family:'Arial Narrow', Arial, sans-serif;
+        text-transform: uppercase;    
+        letter-spacing: 2px;
+        font-weight: lighter;
     }
 }
 .users{
-    margin-top: 100px;
+    margin:75px 0;
 
     &__item{
         display:flex;
         align-items: center;
-        margin-bottom: 15px;
+        padding: 10px;
+        padding-left:20px;
+
+        &:nth-child(odd){
+            background-color: rgba(0, 0, 0, 0.08);
+        }
     }
     &__list{
-        margin-left: 30px;
+
     }
 
     &__avatar{
