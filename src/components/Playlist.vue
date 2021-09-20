@@ -22,7 +22,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
               <li class="playlist-item">
@@ -33,7 +39,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
               <li class="playlist-item">
@@ -44,7 +56,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
               <li class="playlist-item">
@@ -55,7 +73,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
               <li class="playlist-item">
@@ -66,7 +90,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
               <li class="playlist-item">
@@ -77,7 +107,13 @@
                     </div>
                     <div class="playlist-item__info">
                         <span class="playlist-item__time">5:24</span>
-                        <span class="plalist-item__rate">******</span>
+                        <div class="rating">
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle rating__circle--checked"></span>
+                            <span class="rating__circle"></span>
+                            <span class="rating__circle"></span>
+                        </div>
                     </div>
               </li>
           </ul>
@@ -118,7 +154,7 @@ margin-bottom: 15px;
     &__title{
         font-size: 25px;
         color: #3DC864;
-        font-family:'Arial Narrow', Arial, sans-serif;    
+        font-family:'Arial Narrow', Arial, sans-serif;
         text-transform: uppercase;    
         letter-spacing: 2px;
         font-weight: lighter;
@@ -169,7 +205,27 @@ margin-bottom: 15px;
     }
 }
 .playlist-box{
-    margin: 0 20px;
+    margin: 0 20px 100px 20px;
+}
+.rating{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__circle{
+        height: 9px;
+        width: 9px;
+        background-color: #969696;
+        border-radius: 50%;
+        cursor:pointer;
+
+        &--checked{
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+        }
+    }
+
 }
 .playlist-item{
     display: flex;
