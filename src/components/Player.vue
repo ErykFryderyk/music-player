@@ -1,4 +1,7 @@
 <template>
+    <div class="header">
+        <h1 class="header__title">Player</h1>
+    </div>
     <div class="wrapper">
         <div class="song-box">
             <div class="song-box__inner">
