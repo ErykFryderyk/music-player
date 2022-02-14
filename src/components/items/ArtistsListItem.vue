@@ -1,16 +1,16 @@
 <template>
   <div class="playlist-box">
     <ul>
-      <li v-for="item in artists" :key="artists.id" class="playlist-item">
+      <li class="playlist-item">
         <div class="playlist-item__box">
           <img class="playlist-item__image" src="../../assets/received_909123655824827.jpeg" alt="">
           <div class="playlist-item__song">
-            <h3 class="playlist-item__song-name">{{item.songName}}</h3>
-            <h4 class="playlist-item__artist">{{item.artist}}</h4>
+            <h3 class="playlist-item__song-name">{{artist.songName}}</h3>
+            <h4 class="playlist-item__artist">{{artist.artist}}</h4>
           </div>
         </div>
         <div class="playlist-item__info">
-          <span class="playlist-item__time">{{item.durationOfSong}}</span>
+          <span class="playlist-item__time">{{artist.durationOfSong}}</span>
           <div class="rating">
             <span class="rating__circle rating__circle--checked"></span>
             <span class="rating__circle rating__circle--checked"></span>
@@ -27,58 +27,12 @@
 <script>
 export default {
   name: 'ArtistsListItem',
+  props: {
+    artist: Object,
+
+  },
   data() {
     return{
-      artists: [
-        {
-          id:1,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-        {
-          id:2,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-        {
-          id:3,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-        {
-          id:4,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-        {
-          id:5,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-        {
-          id:6,
-          img: 'received_909123655824827.jpeg',
-          songName: 'Polska',
-          artist: 'Kazik',
-          durationOfSong: '5:24',
-          rate: 0,
-        },
-      ]
     }
   }
 }
@@ -86,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .playlist-box{
-  margin: 150px 20px 100px 20px;
+  margin: 0px 20px;
 }
 .playlist-item{
   display: flex;
