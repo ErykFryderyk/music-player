@@ -4,7 +4,9 @@
       <h2 class="header__title">playlist</h2>
       <SearchItem />
     </div>
-    <ArtistsListItem />
+    <ArtistsListItem  
+      v-for="item in artists" :key="item.id" :artist="item"
+    />
   </div>
 </template>
 
@@ -17,11 +19,68 @@ export default {
   components: {
     SearchItem,
     ArtistsListItem,
-  }
+  },
+  data() {
+    return {
+      artists: [
+        {
+          id:1,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+        {
+          id:2,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+        {
+          id:3,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+        {
+          id:4,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+        {
+          id:5,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+        {
+          id:6,
+          img: 'received_909123655824827.jpeg',
+          songName: 'Polska',
+          artist: 'Kazik',
+          durationOfSong: '5:24',
+          rate: 0,
+        },
+      ]
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+.music-playlist{
+  margin: 140px 0 100px 0;
+}
 .header{
   position: fixed;
   top: 0;
