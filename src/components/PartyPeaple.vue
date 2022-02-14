@@ -3,7 +3,9 @@
     <div class="header">
       <h2 class="header__title">party peaple</h2>
     </div>
-    <UsersList/>
+    <UsersList 
+      v-for="user in users" :key="user.id" :user="user"
+    />
   </div>
 </template>
 
@@ -13,12 +15,40 @@ export default {
   name: 'PartyPeaple',
   components: {
     UsersList,
-  }
+  },
+  data() {
+    return {
+      users: [
+      {
+        id: Math.random(),
+        userName: 'Antonina Kobylarek',
+        avatarImage: '',
+      },
+      {
+        id: Math.random(),
+        userName: 'Antonina Kobylarek',
+        avatarImage: '',
+      },
+      {
+        id: Math.random(),
+        userName: 'Antonina Kobylarek',
+        avatarImage: '',
+      },
+      {
+        id: Math.random(),
+        userName: 'Antonina Kobylarek',
+        avatarImage: '',
+      },
+     ]
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.party-peaple{}
+.users-list{
+  margin: 70px 0 100px 0;
+}
 .header{
     text-align: center;
     padding: 20px 0px;
