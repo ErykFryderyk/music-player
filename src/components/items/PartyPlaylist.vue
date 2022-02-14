@@ -5,10 +5,12 @@
     </div>
     <div class="party-playlist__list">
       <ul class="list-of-songs"
-        v-for="song in songs"
-      >
+        v-for="i in item" :key="i.id">
         <li class="list-of-songs__item">
-          <span>{{song.artist}} - {{song.song}}</span>
+          <div class="">
+            <p>{{i.song}}</p>
+            <p>{{i.artist}}</p>
+          </div>
           <div class="rate-buttons">
             <button class="rate-btn rate-btn--like">Like</button>
             <button class="rate-btn rate-btn--hate">Unlike</button>
@@ -22,27 +24,11 @@
 <script>
 export default {
   name: 'PartyPlaylist',
-  props: [],
+  props: {
+    item: Object,
+  },
   data() {
-    return{ 
-      songs: [
-        {
-          artist: 'Queen Of The Stone Age',
-          song: 'In The Fade',
-        },
-        {
-          artist: 'Queen Of The Stone Age',
-          song: 'In The Fade',
-        },
-        {
-          artist: 'Queen Of The Stone Age',
-          song: 'In The Fade',
-        },
-        {
-          artist: 'Queen Of The Stone Age',
-          song: 'In The Fade',
-        },
-      ],
+    return{
     }
   }
 }
@@ -68,7 +54,6 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 9px;
-    // padding: 0 10px 0 10px;
     margin-bottom: 10px;
   }
 }
@@ -80,11 +65,8 @@ export default {
 }
 
 .rate-btn{
-  // width: 20px;
-  // height: 20px;
   background: transparent;
   border:none;
-  // border-radius:50%;
   cursor: pointer;
   text-align: center;
 
