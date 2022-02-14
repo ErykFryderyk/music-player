@@ -1,6 +1,6 @@
 <template>
   <div class="users">
-    <ul class="users__list" v-for="user in users" :key="user.id">
+    <ul class="users__list">
       <li class="users__item">
         <img class="users__avatar" src="../../assets/received_909123655824827.jpeg" alt="">
         <p class="users__name">{{user.userName}}</p>
@@ -12,30 +12,11 @@
 <script>
 export default {
  name: 'UsersList',
+ props: {
+   user: Object,
+ },
  data() {
    return{
-     users: [
-      {
-        id: Math.random(),
-        userName: 'Antonina Kobylarek',
-        avatarImage: '',
-      },
-      {
-        id: Math.random(),
-        userName: 'Antonina Kobylarek',
-        avatarImage: '',
-      },
-      {
-        id: Math.random(),
-        userName: 'Antonina Kobylarek',
-        avatarImage: '',
-      },
-      {
-        id: Math.random(),
-        userName: 'Antonina Kobylarek',
-        avatarImage: '',
-      },
-     ]
    }
  }
 }
@@ -43,7 +24,6 @@ export default {
 
 <style lang='scss' scoped>
 .users{
-    margin-top: 70px;
 
     &__item{
         display:flex;
