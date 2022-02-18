@@ -12,8 +12,12 @@
             <p>{{i.artist}}</p>
           </div>
           <div class="rate-buttons">
-            <button class="rate-btn rate-btn--like">Like</button>
-            <button class="rate-btn rate-btn--hate">Unlike</button>
+            <LikeBtn>
+              <font-awesome-icon icon="heart" />
+            </LikeBtn>
+            <LikeBtn>
+              <font-awesome-icon icon="thumbs-down" />
+            </LikeBtn>
           </div>
         </li>
       </ul>
@@ -22,8 +26,13 @@
 </template>
 
 <script>
+import LikeBtn from '../items/LikeBtn.vue';
+
 export default {
   name: 'PartyPlaylist',
+  components: {
+    LikeBtn,
+  },
   props: {
     item: Object,
   },
