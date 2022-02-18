@@ -1,6 +1,6 @@
 <template>
   <button class="rate-btn rate-btn--like">
-    <font-awesome-icon icon="phone" />
+    <slot/>
   </button>
 </template>
 
