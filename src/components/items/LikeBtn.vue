@@ -1,5 +1,10 @@
 <template>
-  <button class="rate-btn rate-btn--like">
+  <button class="rate-btn" 
+    :class="{
+      'rate-btn--like': isLike,
+      'rate-btn--hate': !isLike,  
+    }"
+  >
     <slot/>
   </button>
 </template>
@@ -7,6 +12,12 @@
 <script>
 export default {
   name: 'LikeBtn',
+  props: {
+    isLike: {
+      type: Boolean,
+      default: true,
+    }
+  },
   data() {
     return{
     }
