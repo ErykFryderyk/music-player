@@ -12,10 +12,10 @@
             <p>{{i.artist}}</p>
           </div>
           <div class="rate-buttons">
-            <LikeBtn>
+            <LikeBtn :isLike="true">
               <font-awesome-icon icon="heart" />
             </LikeBtn>
-            <LikeBtn>
+            <LikeBtn :isLike="false">
               <font-awesome-icon icon="thumbs-down" />
             </LikeBtn>
           </div>
@@ -68,9 +68,10 @@ export default {
 }
 
 .rate-buttons{
-  width: 50px;
+  width: 70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .rate-btn{
