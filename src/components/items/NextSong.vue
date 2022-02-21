@@ -6,8 +6,11 @@
     <div>
       <ul class="next-song__list">
         <li class="next-song__list-item">
-          <span>{{nextSong.artist}} - {{nextSong.song}}</span>
-          <p class="result-of-the-vote"><span class="like">23</span> / <span class="unlike">2</span></p>
+          <div class="">
+            <h2>{{nextSong.songName}}</h2>
+            <h4>{{nextSong.artist}}</h4>
+          </div>
+          <p class="result-of-the-vote"><span class="like">{{nextSong.likes}}</span> | <span class="dislike">{{nextSong.disLikes}}</span></p>
         </li>
       </ul>
     </div>
@@ -17,12 +20,11 @@
 <script>
 export default {
   name: 'WonSong',
+  props: {
+    nextSong: Object,
+  },
   data(){
     return{
-      nextSong: {
-        artist: 'Queen Of The Stone Age',
-        song: 'In The Fade',
-      }
     }
   }
 }
@@ -50,10 +52,10 @@ export default {
   font-size: 16px;
 
   .like{
-    color: green;
+    color: #3ea73e;
   }
-  .unlike{
-    color: red;
+  .dislike{
+    color: #df2f2f;
   }
 }
 </style>
