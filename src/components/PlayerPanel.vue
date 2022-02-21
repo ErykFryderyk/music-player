@@ -1,7 +1,7 @@
 <template>
   <div class="player-panel">
     <FavoriteSongToPlay />
-    <NextSong />
+    <NextSong :nextSong="nextSong"/>
     <PartyPlaylist 
       :item="songs"
     />
@@ -22,6 +22,12 @@ export default {
   },
   data() {
     return {
+      nextSong: {
+        artist: 'Queen Of The Stone Age',
+        songName: 'In The Fade',
+        likes: 20,
+        disLikes: 2,
+      },
       songs: [
         {
           id: Math.random(),
